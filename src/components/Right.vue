@@ -47,4 +47,7 @@
 
 </style>
 <style>
+#Right{
+  text-align:left;
+}
 </style>

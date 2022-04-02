@@ -30,3 +30,8 @@
     }
 </style>
 
+<style>
+#Left{
+  text-align: right;
+}
+</style>

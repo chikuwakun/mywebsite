@@ -22,19 +22,36 @@ export default {
     }
   ,watch:{
         currentRight(){
+            if (this.left == "0%") {
+              this.left = "50%"
+              const elem = document.getElementById("Right");
+              elem.style.color = "#FFFFFF"
+
+              const elem2 = document.getElementById("Left");
+              elem2.style.color = "#2a2c32"
+            }else{
+              this.left = "0%"
+              const elem = document.getElementById("Left");
+              elem.style.color = "#FFFFFF"
+              const elem2 = document.getElementById("Right");
+              elem2.style.color = "#2a2c32"
+            }
+        },
+        currentLeft(){
+          if(this.left == "50%"){
+            this.left = "0%"
+            const elem = document.getElementById("Left");
+            elem.style.color = "#FFFFFF"
+            const elem2 = document.getElementById("Right");
+            elem2.style.color = "#2a2c32"}
+          else{
             this.left = "50%"
             const elem = document.getElementById("Right");
             elem.style.color = "#FFFFFF"
 
             const elem2 = document.getElementById("Left");
             elem2.style.color = "#2a2c32"
-        },
-        currentLeft(){
-            this.left = "0%"
-            const elem = document.getElementById("Left");
-            elem.style.color = "#FFFFFF"
-            const elem2 = document.getElementById("Right");
-            elem2.style.color = "#2a2c32"
+          }
         }
     }
     ,
@@ -57,12 +74,20 @@ export default {
 <style>
 
 #app {
-  font-family: "AB-aki",Avenir, Helvetica, Arial, sans-serif;
+
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 200;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2a2c32;
     height: 100vh;
+}
+p {
+  font-family: zen-maru-gothic,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {
