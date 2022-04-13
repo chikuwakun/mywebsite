@@ -1,12 +1,12 @@
 <template>
-  <div>
-
-  </div>
+<div id="image">
+  <img src="" alt="">
+</div>
 </template>
 
 <script>
 export default {
-  name: "concreate"
+  name: "imageTest"
 }
 </script>
 

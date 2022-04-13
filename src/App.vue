@@ -21,23 +21,7 @@ export default {
       }
     }
   ,watch:{
-        currentRight(){
-            if (this.left == "0%") {
-              this.left = "50%"
-              const elem = document.getElementById("Right");
-              elem.style.color = "#FFFFFF"
-
-              const elem2 = document.getElementById("Left");
-              elem2.style.color = "#2a2c32"
-            }else{
-              this.left = "0%"
-              const elem = document.getElementById("Left");
-              elem.style.color = "#FFFFFF"
-              const elem2 = document.getElementById("Right");
-              elem2.style.color = "#2a2c32"
-            }
-        },
-        currentLeft(){
+        currentWhich(){
           if(this.left == "50%"){
             this.left = "0%"
             const elem = document.getElementById("Left");
@@ -51,9 +35,8 @@ export default {
 
             const elem2 = document.getElementById("Left");
             elem2.style.color = "#2a2c32"
-          }
         }
-    }
+    }}
     ,
     computed:{
         currentRight: function () {
@@ -62,6 +45,9 @@ export default {
         currentLeft: function () {
             return this.$store.getters.getLeft
         },
+      currentWhich: function (){
+          return this.$store.getters.getWhich
+      },
         inputCssVars(){
             return{
                 '--hogehoge':this.left

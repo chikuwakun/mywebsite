@@ -9,6 +9,7 @@
     import aboutMe from "@/components/about";
     import worksMe from "@/components/works";
     import contactMe from "@/components/contact";
+    import testHoge from "@/components/Works/testHoge";
     // import About from "@/components/About";
     // import Contact from "@/components/Contact";
     // import Works from "@/components/Works";
@@ -29,6 +30,7 @@
             onamae,
             aboutMe,
             worksMe,
+          testHoge,
             contactMe
             /* eslint-disable */
         },
@@ -45,9 +47,12 @@
         transition: color ease-in 0.3s;
     }
 
+
+
 </style>
 <style>
 #Right{
   text-align:left;
 }
+
 </style>

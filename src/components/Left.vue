@@ -1,21 +1,32 @@
 <template>
     <div id="Left">
-        <component v-bind:is="currentComponent"></component>
+        <component id='leftContent'  v-bind:is="currentComponent"></component>
     </div>
 </template>
 
 <script>
+import onamae from "@/components/onamae";
     import Menu from "@/components/menu";
-
+    import imageTest from "@/components/imageTest";
+    import testHoge from "@/components/Works/testHoge";
     export default {
         name: "LeftContent",
         components:{Menu,
+          onamae,
+          imageTest,
+          testHoge
         },
-        data(){
-            return{
-                currentComponent:this.$store.state.left
-            }
+      watch:{
+        currentComponent(values){
+          console.log(values)
         }
+      }
+      ,
+      computed:{
+        currentComponent: function () {
+          return this.$store.getters.getLeft
+        }
+      }
     }
 </script>
 

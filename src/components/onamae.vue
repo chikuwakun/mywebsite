@@ -1,6 +1,6 @@
 <template>
     <div id = Name>
-        <h1>HIKARU YAMAUCHI</h1>
+        <h1>AKIRA EBINA</h1>
     </div>
 </template>
 
